@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Mario-Clone</title>
+</head>
+
+<body>
+    <div class="main">
+        <div id="score">SCORE: <span id="currentScore"></span></div>
+        <div id="marioMan">
+            <img id="mario" src=".\Images\Mario.gif" alt="">
+            <img id="mario2" src=".\Images\marioStanding.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleOne">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwo">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BlankGoldBox.webp" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BlankGoldBox.webp" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThree">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="GreenPipe">
+            <img class="GreenPipeFirst" src=".\Images\PipeGreen.png" alt="">
+            <img class="GreenPipeSecond" src=".\Images\PipeGreen.png" alt="">
+            <img class="GreenPipeThird" src=".\Images\PipeGreen.png" alt="">
+            <img class="GreenPipeFourth" src=".\Images\PipeGreen.png" alt="">
+            <img class="GreenPipeFive" src=".\Images\PipeGreen.png" alt="">
+            <img class="GreenPipeSix" src=".\Images\PipeGreen.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleFour">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BlankGoldBox.webp" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleFive">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+
+
+        <img class="villainHead" id="villainHeadOne" src=".\Images\VillainHeadImg.png" alt="">
+        <img class="villainHead" id="villainHeadTwo" src=".\Images\VillainHeadImg.png" alt="">
+        <img class="villainHead" id="villainHeadThree" src=".\Images\VillainHeadImg.png" alt="">
+        <img class="villainHead" id="villainHeadFour" src=".\Images\VillainHeadImg.png" alt="">
+        <img class="villainHead" id="villainHeadFive" src=".\Images\VillainHeadImg.png" alt="">
+        <img class="villainHead" id="villainHeadSix" src=".\Images\VillainHeadImg.png" alt="">
+
+        <img class="TurtleVillain" id="turtlesOne_left" src=".\Images\villainTurtleLeft.png" alt="">
+        <img class="TurtleVillain" id="turtlesTwo_left" src=".\Images\villainTurtleLeft.png" alt="">
+        <img class="TurtleVillain" id="turtlesThree_left" src=".\Images\villainTurtleLeft.png" alt="">
+        <img class="TurtleVillain" id="turtlesFour_left" src=".\Images\villainTurtleLeft.png" alt="">
+        <img class="TurtleVillain" id="turtlesFive_left" src=".\Images\villainTurtleLeft.png" alt="">
+        <img class="TurtleVillain" id="turtlesSix_left" src=".\Images\villainTurtleLeft.png" alt="">
+
+
+        <div class="obstacle" id="obstacleSix">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\QuestionBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleSeven">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleEight">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleNine">
+            <img class="BricksBlock" src=".\Images\QuestionBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTen">
+            <img class="BricksBlock" src=".\Images\QuestionBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleEleven">
+            <img class="BricksBlock" src=".\Images\QuestionBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwelve">
+            <img class="BricksBlock" src=".\Images\QuestionBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThirteen">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleForteen">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleFifteen">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\QuestionBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\QuestionBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleSixteen">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleSeventeen">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleEighteen">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleNineteen">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwenty">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwentyOne">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwentyTwo">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwentyThree">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwentyFour">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwentyFive">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwentySix">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwentySeven">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwentyEight">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleTwentyNine">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThirty">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThirtyOne">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThirtyTwo">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThirtyThree">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\QuestionBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThirtyFour">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThirtyFive">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThirtySix">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThirtySeven">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThirtyEight">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleThirtyNine">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleFourty">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleFourtyOne">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="obstacle" id="obstacleFourtyTwo">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+
+        <div class="runningPath">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <div class="runningPathSecond">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+        </div>
+        <img id="endImg" src=".\Images\end.png" alt="">
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

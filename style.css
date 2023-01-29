@@ -1,0 +1,650 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.main{
+    width: 800vw;
+    height: 100vh;
+    background-color: skyblue;
+    position: relative;
+}
+
+#mario{
+    display: none;
+    color: green;
+    height: 100px;
+    width: 70px;
+    bottom: 130px;
+    position: absolute;
+    z-index: 10;
+}
+#mario2{
+    color: green;
+    height: 120px;
+    width: 70px;
+    bottom: 130px;
+    position: absolute;
+    z-index: 10;
+}
+
+.BricksBlock{
+    width: 70px;
+    height: 60px;
+    background-color: green;
+}
+
+#obstacleOne{
+    position: absolute;
+    top: 400px;
+    left: 600px;
+    width: fit-content;
+}
+
+#obstacleTwo{
+    position: absolute;
+    top: 400px;
+    left: 800px;
+    width: fit-content;  
+}
+
+#obstacleThree{
+    position: absolute;
+    top: 160px;
+    left: 950px;
+    width: fit-content;
+}
+
+#GreenPipe{
+    width: fit-content;
+    position: absolute;
+    bottom: 120px;
+    left: 1450px;
+}
+
+.GreenPipeFirst{
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    bottom: -5px;
+}
+
+.GreenPipeSecond{
+    width: 130px;
+    height: 190px;
+    position: absolute;
+    left: 400px;
+    bottom: -5px;
+}
+
+.GreenPipeThird{
+    width: 130px;
+    height: 240px;
+    position: absolute;
+    left: 800px;
+    bottom: -10px;
+}
+
+.GreenPipeFourth{
+    width: 130px;
+    height: 240px;
+    position: absolute;
+    left: 1250px;
+    bottom: -10px;
+}
+.runningPath{
+    width: fit-content;
+    display: flex;
+    position: absolute;
+    bottom: 3px;
+}
+.runningPathSecond{
+    width: fit-content;
+    display: flex;
+    position: absolute;
+    bottom: 70px;
+}
+
+#obstacleFour{
+    width: fit-content;
+    position: absolute;
+    left: 3500px;
+    top: 310px;
+}
+
+#obstacleFive{
+    width: fit-content;
+    float: left;
+    position: absolute;
+    left: 3650px;
+    top: 100px;
+}
+
+#obstacleSix{
+    width: fit-content;
+    float: left;
+    position: absolute;
+    left: 4250px;
+    top: 100px;
+}
+
+#obstacleSeven{
+    width: fit-content;
+    position: absolute;
+    left: 4480px;
+    top: 350px;
+}
+
+#obstacleEight{
+    width: fit-content;
+    position: absolute;
+    left: 4800px;
+    top: 350px;
+}
+
+#obstacleNine{
+    width: fit-content;
+    position: absolute;
+    left: 5300px;
+    top: 350px;
+}
+
+#obstacleTen{
+    width: fit-content;
+    position: absolute;
+    left: 5500px;
+    top: 350px;
+}
+
+#obstacleEleven{
+    width: fit-content;
+    position: absolute;
+    left: 5700px;
+    top: 350px;
+}
+
+#obstacleTwelve{
+    width: fit-content;
+    position: absolute;
+    left: 5500px;
+    top: 150px;
+}
+
+#obstacleThirteen{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 6000px;
+    top: 350px;
+}
+
+#obstacleForteen{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 6580px;
+    top: 350px;
+}
+
+#obstacleFifteen{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 6500px;
+    top: 100px;
+}
+
+#obstacleSixteen{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 6190px;
+    top: 100px;
+}
+
+
+#obstacleSeventeen{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 7100px;
+    bottom: 130px;
+}
+#obstacleEighteen{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 7174px;
+    bottom: 190px;
+}
+#obstacleNineteen{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 7248px;
+    bottom: 250px;
+}
+#obstacleTwenty{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 7322px;
+    bottom: 310px;
+}
+#obstacleTwentyOne{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 7500px;
+    bottom: 130px;
+}
+#obstacleTwentyTwo{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 7500px;
+    bottom: 190px;
+}
+#obstacleTwentyThree{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 7500px;
+    bottom: 250px;
+}
+#obstacleTwentyFour{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 7500px;
+    bottom: 310px;
+}
+
+#obstacleTwentyFive{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 8039px;
+    bottom: 130px;
+}
+#obstacleTwentySix{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 8113px;
+    bottom: 190px;
+}
+#obstacleTwentySeven{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 8187px;
+    bottom: 250px;
+}
+#obstacleTwentyEight{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 8261px;
+    bottom: 310px;
+}
+#obstacleTwentyNine{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 8400px;
+    bottom: 130px;
+}
+#obstacleThirty{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 8400px;
+    bottom: 190px;
+}
+#obstacleThirtyOne{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 8400px;
+    bottom: 250px;
+}
+#obstacleThirtyTwo{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 8400px;
+    bottom: 310px;
+}
+
+.GreenPipeFive{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 7450px;
+    bottom: -2px;
+}
+
+#obstacleThirtyThree{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 9150px;
+    bottom: 350px;
+}
+
+.GreenPipeSix{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    left: 8150px;
+    bottom: -2px;
+}
+
+#obstacleThirtyFour{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 9700px;
+    bottom: 130px;
+}
+#obstacleThirtyFive{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 9774px;
+    bottom: 190px;
+}
+#obstacleThirtySix{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 9848px;
+    bottom: 250px;
+}
+#obstacleThirtySeven{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 9922px;
+    bottom: 310px;
+}
+#obstacleThirtyEight{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 9996px;
+    bottom: 370px;
+}
+#obstacleThirtyNine{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 10070px;
+    bottom: 430px;
+}
+#obstacleFourty{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 10144px;
+    bottom: 490px;
+}
+#obstacleFourtyOne{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 10218px;
+    bottom: 550px;
+}
+#obstacleFourtyTwo{
+    float: left;
+    width: fit-content;
+    position: absolute;
+    left: 10292px;
+    bottom: 610px;
+}
+
+#endImg{
+    position: absolute;
+    right: 0%;
+    bottom: 100px;
+    width: 1160px;
+    height: 656px;
+}
+
+.villainHead{
+    height: 70px;
+    width: 70px;
+}
+.TurtleVillain{
+    height: 70px;
+    width: 70px;
+}
+
+#villainHeadOne{
+    position: absolute;
+    bottom: 130px;
+    animation: villainHeadOne 10s ease-in-out 0s infinite reverse forwards;
+}
+
+@keyframes villainHeadOne{
+    0%{
+        left: 2800px;
+    }
+    50%{
+        left: 3150px;
+    }
+    100%{
+        left: 2800px;
+    }
+}
+
+#villainHeadTwo{
+    position: absolute;
+    bottom: 130px;
+    animation: villainHeadTwo 10s ease-in-out 0s infinite reverse forwards;
+}
+
+@keyframes villainHeadTwo{
+    0%{
+        left: 2645px;
+    }
+    50%{
+        left: 2345px;
+    }
+    100%{
+        left: 2645px;
+    }
+}
+
+#villainHeadThree{
+    position: absolute;
+    bottom: 130px;
+    animation: villainHeadThree 10s ease-in-out 0s infinite reverse forwards;
+}
+
+@keyframes villainHeadThree{
+    0%{
+        left: 2345px;
+    }
+    50%{
+        left: 2645px;
+    }
+    100%{
+        left: 2345px;
+    }
+}
+
+#villainHeadFour{
+    position: absolute;
+    bottom: 130px;
+    animation: villainHeadFour 20s ease-in-out 0s infinite reverse forwards;
+}
+
+@keyframes villainHeadFour{
+    0%{
+        left: 1400px;
+    }
+    50%{
+        left: 0px;
+    }
+    100%{
+        left: 1400px;
+    }
+}
+
+#villainHeadFive{
+    position: absolute;
+    bottom: 130px;
+    animation: villainHeadFive 30s ease-in-out 0s infinite reverse forwards;
+}
+
+@keyframes villainHeadFive{
+    0%{
+        left: 4200px;
+    }
+    50%{
+        left: 5500px;
+    }
+    100%{
+        left: 4200px;
+    }
+}
+
+#villainHeadSix{
+    position: absolute;
+    bottom: 130px;
+    animation: villainHeadSix 20s ease-in-out 0s infinite reverse forwards;
+}
+
+@keyframes villainHeadSix{
+    0%{
+        left: 4600px;
+    }
+    50%{
+        left: 5200px;
+    }
+    100%{
+        left: 4600px;
+    }
+}
+
+#turtlesOne_left{
+    position: absolute;
+    bottom: 130px;
+    animation: turtlesOne_left 30s ease-in-out 0s infinite reverse forwards;
+}
+
+@keyframes turtlesOne_left{
+    0%{
+        left: 1400px;
+    }
+    50%{
+        left: 0px;
+    }
+    100%{
+        left: 1400px;
+    }
+}
+
+#turtlesTwo_left{
+    position: absolute;
+    bottom: 385px;
+    animation: turtlesTwo_left 15s ease-in 0s infinite reverse forwards;
+}
+
+@keyframes turtlesTwo_left{
+    0%{
+        left: 1200px;
+    }
+    50%{
+        left: 750px;
+    }
+    100%{
+        left: 1200px;
+    }
+}
+
+#turtlesThree_left{
+    position: absolute;
+    bottom: 130px;
+    animation: turtlesThree_left 15s ease-in-out 0s infinite reverse forwards;
+}
+
+@keyframes turtlesThree_left{
+    0%{
+        left: 5500px;
+    }
+    50%{
+        left: 6700px;
+    }
+    100%{
+        left: 5500px;
+    }
+}
+
+#turtlesFour_left{
+    position: absolute;
+    bottom: 130px;
+    animation: turtlesFour_left 20s ease-in-out 0s infinite reverse forwards;
+}
+
+@keyframes turtlesFour_left{
+    0%{
+        left: 7000px;
+    }
+    50%{
+        left: 5900px;
+    }
+    100%{
+        left: 7000px;
+    }
+}
+
+#turtlesFive_left{
+    position: absolute;
+    bottom: 690px;
+    animation: turtlesFive_left 10s ease-in 0s infinite reverse forwards;
+}
+
+@keyframes turtlesFive_left{
+    0%{
+        left: 4050px;
+    }
+    50%{
+        left: 3630px;
+    }
+    100%{
+        left: 4050px;
+    }
+}
+
+#turtlesSix_left{
+    position: absolute;
+    bottom: 415px;
+    /* left: 3150px; */
+    /* left: 2800px; */
+    animation: turtlesSix_left 10s ease-in 0s infinite reverse forwards;
+}
+
+@keyframes turtlesSix_left{
+    0%{
+        left: 9130px;
+    }
+    50%{
+        left: 9400px;
+    }
+    100%{
+        left: 9130px;
+    }
+}
+#score{
+    font-family:fantasy;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: brown;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
