@@ -174,14 +174,14 @@
 }
 
 .GreenPipeFirst{
-    width: 130px;
+    width: 100px;
     height: 130px;
     position: absolute;
     bottom: -5px;
 }
 
 .GreenPipeSecond{
-    width: 130px;
+    width: 100px;
     height: 190px;
     position: absolute;
     left: 400px;
@@ -189,7 +189,7 @@
 }
 
 .GreenPipeThird{
-    width: 130px;
+    width: 100px;
     height: 240px;
     position: absolute;
     left: 800px;
@@ -197,7 +197,7 @@
 }
 
 .GreenPipeFourth{
-    width: 130px;
+    width: 100px;
     height: 240px;
     position: absolute;
     left: 1250px;

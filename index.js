@@ -32,14 +32,6 @@ window.onload = function () {
     const $marioLeft = parseInt(window.getComputedStyle($mario).getPropertyValue('left'));
     const $mario2Left = parseInt(window.getComputedStyle($mario2).getPropertyValue('left'));
 
-    // for(let i = 0; i<=brickBlock.length; i++){
-    // const brickBlockTop = parseInt(window.getComputedStyle(brickBlock)[0].getPropertyValue('top'));
-    // const brickBlockBottom = parseInt(window.getComputedStyle(brickBlock)[0].getPropertyValue('bottom'));
-    // const brickBlockLeft = parseInt(window.getComputedStyle(brickBlock)[0].getPropertyValue('left'));
-    // const brickBlockRight = parseInt(window.getComputedStyle(brickBlock)[0].getPropertyValue('right'));
-    // }
-
-
     let isJumping = false;
     let upTime;
     let downTime;
@@ -51,26 +43,17 @@ window.onload = function () {
 
     // ========================= Function for Score which will start just after Window load ==============================
 
-
-
-    score = 20000
+    score = 0
     $currentScore.innerText = score;
 
-
-
-
     function scoring() {
-        score--;
+        score++;
         $currentScore.innerText = score;
     }
 
     function stopScore() {
         clearInterval(scoreInterval);
     }
-
-
-
-
 
     // ===========================================================================================================
 
@@ -80,19 +63,19 @@ window.onload = function () {
         if (counter == 10810 || counter + 40 >= 10810) {
             return;
         }
-
+        // ((($mario.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right)) && (((brickBlock[j].getBoundingClientRect().bottom > $mario.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario.getBoundingClientRect().bottom) || (brickBlock[j].getBoundingClientRect().bottom > $mario2.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario2.getBoundingClientRect().bottom)) || (($mario.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom) || ($mario2.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario2.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom))))
         else {
-            for (var i = 0; i <= 40; i++){
+            for (var i = 0; i <= 40; i++) {
                 for (var j = 0; j < brickBlock.length; j++) {
-                    if ((($mario.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right)) && (((brickBlock[j].getBoundingClientRect().bottom > $mario.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario.getBoundingClientRect().bottom) || (brickBlock[j].getBoundingClientRect().bottom > $mario2.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario2.getBoundingClientRect().bottom)) || (($mario.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom) || ($mario2.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario2.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom)))) {
+                    if ((($mario.getBoundingClientRect().right == brickBlock[j].getBoundingClientRect().left) || ($mario2.getBoundingClientRect().right == brickBlock[j].getBoundingClientRect().left)) && (((brickBlock[j].getBoundingClientRect().bottom > $mario.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario.getBoundingClientRect().bottom) || (brickBlock[j].getBoundingClientRect().bottom > $mario2.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario2.getBoundingClientRect().bottom)) || (($mario.getBoundingClientRect().bottom > brickBlock[j].getBoundingClientRect().top && $mario.getBoundingClientRect().bottom < brickBlock[j].getBoundingClientRect().bottom) || ($mario2.getBoundingClientRect().bottom > brickBlock[j].getBoundingClientRect().top && $mario2.getBoundingClientRect().bottom < brickBlock[j].getBoundingClientRect().bottom)))) {
                         return;
-                    } 
+                    }
                 }
-                counter += 1;  
+                counter += 1;
                 $mario.style.left = counter + "px";
                 $mario2.style.left = counter + "px";
             }
-                
+
         }
     }
 
@@ -108,9 +91,9 @@ window.onload = function () {
         else {
             for (let i = 0; i <= 40; i++) {
                 for (var j = 0; j < brickBlock.length; j++) {
-                    if ((($mario.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right)) && (((brickBlock[j].getBoundingClientRect().bottom > $mario.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario.getBoundingClientRect().bottom) || (brickBlock[j].getBoundingClientRect().bottom > $mario2.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario2.getBoundingClientRect().bottom)) || (($mario.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom) || ($mario2.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario2.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom)))) {
+                    if ((($mario.getBoundingClientRect().left == brickBlock[j].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().left == brickBlock[j].getBoundingClientRect().right)) && (((brickBlock[j].getBoundingClientRect().bottom > $mario.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario.getBoundingClientRect().bottom) || (brickBlock[j].getBoundingClientRect().bottom > $mario2.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario2.getBoundingClientRect().bottom)) || (($mario.getBoundingClientRect().bottom > brickBlock[j].getBoundingClientRect().top && $mario.getBoundingClientRect().bottom < brickBlock[j].getBoundingClientRect().bottom) || ($mario2.getBoundingClientRect().bottom > brickBlock[j].getBoundingClientRect().top && $mario2.getBoundingClientRect().bottom < brickBlock[j].getBoundingClientRect().bottom)))) {
                         return;
-                    } 
+                    }
                 }
                 counter--;
                 $mario.style.left = counter + "px";
@@ -138,14 +121,16 @@ window.onload = function () {
             let counting = 0;
             for (let i = 0; i <= 460; i++) {
                 counting += 1;
+                // counter += 0.2;
                 $mario.style.bottom = (jumper + counting) + "px";
-                $mario.style.left = counter + "px";
+                // $mario.style.left = counter + "px";
                 $mario2.style.bottom = (jumper + counting) + "px";
-                $mario2.style.left = counter + "px";
+                // $mario2.style.left = counter + "px";
             }
 
         }
         setTimeout(JumpFault, 1000);
+
     }
 
     function longJump() {
@@ -204,43 +189,39 @@ window.onload = function () {
             return;
         }
         else {
-            for (let i = 0; i <= villain.length; i++) {
-                //================ For Villain Over when Mario Touches Villain by Top-Side of Villain =============================================================
-                if (($mario.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right)) {
-                    let counting = 461;
-                    villain[i].style.bottom = "0px";
-                    villain[i].style.display = "none";
-                    for (let j = 0; j <= 330; j++) {
-                        counting -= 1;
-                        $mario.style.bottom = (jumper + counting) + "px";
-                        $mario.style.left = counter + "px";
-                        $mario2.style.bottom = (jumper + counting) + "px";
-                        $mario2.style.left = counter + "px";
-                        // setTimeout(setInterval(
-                        // function runMario(){
-                        //         marioDead();
-                        //     }, 1), 1000);
-                        runMario = setInterval(
-                            function () {
-                                marioDead();
-                            }, 1)
+
+            let counting = 461;
+            for (let i = 0; i <= 330; i++) {
+
+                for (let i = 0; i < villain.length; i++) {
+                    //================ For Villain Over when Mario Touches Villain by Top-Side of Villain =============================================================
+                    // ((($mario.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right)) && (($mario.getBoundingClientRect().bottom >= villain[i].getBoundingClientRect().top && $mario.getBoundingClientRect().top <= villain[i].getBoundingClientRect().bottom) || ($mario2.getBoundingClientRect().bottom >= villain[i].getBoundingClientRect().top && $mario2.getBoundingClientRect().top <= villain[i].getBoundingClientRect().bottom)))
+                    if ((($mario.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right)) && (($mario.getBoundingClientRect().bottom == villain[i].getBoundingClientRect().top) || ($mario2.getBoundingClientRect().bottom == villain[i].getBoundingClientRect().top))) {
+                        let counting = 461;
+
+                        villain[i].style.bottom = "0px";
+                        villain[i].style.display = "none";
+
                     }
                 }
-                else {
-                    let counting = 461;
-                    for (let i = 0; i <= 330; i++) {
-                        counting -= 1;
-                        $mario.style.bottom = (jumper + counting) + "px";
-                        $mario.style.left = counter + "px";
-                        $mario2.style.bottom = (jumper + counting) + "px";
-                        $mario2.style.left = counter + "px";
+
+                for (var j = 0; j < brickBlock.length; j++) {
+                    // ((($mario.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right)) && (((brickBlock[j].getBoundingClientRect().bottom > $mario.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario.getBoundingClientRect().bottom) || (brickBlock[j].getBoundingClientRect().bottom > $mario2.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario2.getBoundingClientRect().bottom)) || (($mario.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom) || ($mario2.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario2.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom))))
+                    if ((($mario.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right)) && ((brickBlock[j].getBoundingClientRect().top == $mario.getBoundingClientRect().bottom) || (brickBlock[j].getBoundingClientRect().top == $mario2.getBoundingClientRect().bottom))) {
+                        return;
                     }
                 }
+
+                counting -= 1;
+                // counter += 0.2;
+                $mario.style.bottom = (jumper + counting) + "px";
+                // $mario.style.left = counter + "px";
+                $mario2.style.bottom = (jumper + counting) + "px";
+                // $mario2.style.left = counter + "px";
             }
         }
 
     }
-
     //==================================================================================================================================================================
 
     //================ Functions for Arrow Key's when it will Press/Click =============================================================
@@ -251,7 +232,6 @@ window.onload = function () {
         switch (event.keyCode) {
             case 39:
                 moveForward();
-                // marioDead();
                 break;
             case 38:
                 Jump(event);
@@ -324,7 +304,7 @@ window.onload = function () {
         runMario = setInterval(
             function () {
                 marioDead();
-            }, 1)
+            }, 1);
     }
 
     function endGame() {
