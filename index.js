@@ -10,7 +10,7 @@ window.onload = function () {
     const $endGameButton = document.getElementById('endGameButton');
     const $displayEndScore = document.getElementById('displayEndScore');
     const brickBlock = document.getElementsByClassName("BricksBlockBarrier");
-    const skyBlueBlock = document.getElementsByClassName("gameOverBlock");
+    const noRunRoute = document.getElementsByClassName("longBricksWall");
 
     const $villainOne = document.getElementById('villainHeadOne');
     const $villainTwo = document.getElementById('villainHeadTwo');
@@ -61,6 +61,29 @@ window.onload = function () {
 
     function stopScore() {
         clearInterval(scoreInterval);
+    }
+
+    function checkRunPath() {
+        if (counting <= 140){
+            for (let k = 0; k < noRunRoute.length; k++) {
+                if (($mario.getBoundingClientRect().left >= noRunRoute[k].getBoundingClientRect().right && $mario.getBoundingClientRect().right >= noRunRoute[k + 1].getBoundingClientRect().left)) {
+                    $mario.style.bottom = "-100px";
+                    $mario2.style.bottom = "-100px";
+                    $mainSound.pause();
+                    $overSound.play();
+    
+                    setTimeout(() => {
+                        $endGame.style.display = 'flex';
+                        $mainGame.style.display = 'none';
+                        $displayEndScore.innerText = score;
+                        counter = 0;
+                        stopScore();
+                    }, 2000);
+    
+                    return;
+                }
+            }
+        }
     }
 
     // function gravity() {
@@ -332,19 +355,6 @@ window.onload = function () {
             }
         }
 
-        for (let k = 0; k < skyBlueBlock.length; k++) {
-            if (($mario.getBoundingClientRect().right >= skyBlueBlock[k].getBoundingClientRect().left && $mario.getBoundingClientRect().bottom === skyBlueBlock[k].getBoundingClientRect().bottom && $mario.getBoundingClientRect().left <= skyBlueBlock[k].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right > skyBlueBlock[k].getBoundingClientRect().left && $mario2.getBoundingClientRect().bottom === skyBlueBlock[k].getBoundingClientRect().bottom && $mario2.getBoundingClientRect().left < skyBlueBlock[k].getBoundingClientRect().right)) {
-                $mainSound.pause();
-                $overSound.play();
-                $endGame.style.display = 'flex';
-                $mainGame.style.display = 'none';
-                $displayEndScore.innerText = score;
-                counter = 0;
-                stopScore();
-                return;
-            }
-        }
-
     }
 
     //==================================================================================================================================================================
@@ -369,6 +379,8 @@ window.onload = function () {
             function () {
                 marioDead();
             }, 1);
+
+        setInterval(checkRunPath, 1);
     }
 
     //==================================================================================================================================================================

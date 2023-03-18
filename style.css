@@ -71,6 +71,7 @@
 #startGame {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-image: linear-gradient(rgb(8, 0, 255), rgb(245, 233, 7), rgb(255, 0, 234), rgb(21, 255, 0));
 }
 
@@ -151,6 +152,7 @@
     height: 100vh;
     background-color: skyblue;
     position: relative;
+    overflow:hidden;
 }
 
 
