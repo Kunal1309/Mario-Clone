@@ -220,7 +220,7 @@
     width: fit-content;
     position: absolute;
     left: 3500px;
-    top: 310px;
+    top: 380px;
 }
 
 #obstacleFive{
@@ -243,35 +243,35 @@
     width: fit-content;
     position: absolute;
     left: 4480px;
-    top: 350px;
+    top: 380px;
 }
 
 #obstacleEight{
     width: fit-content;
     position: absolute;
     left: 4800px;
-    top: 350px;
+    top: 380px;
 }
 
 #obstacleNine{
     width: fit-content;
     position: absolute;
     left: 5300px;
-    top: 350px;
+    top: 380px;
 }
 
 #obstacleTen{
     width: fit-content;
     position: absolute;
     left: 5500px;
-    top: 350px;
+    top: 380px;
 }
 
 #obstacleEleven{
     width: fit-content;
     position: absolute;
     left: 5700px;
-    top: 350px;
+    top: 380px;
 }
 
 #obstacleTwelve{
@@ -286,7 +286,7 @@
     width: fit-content;
     position: absolute;
     left: 6000px;
-    top: 350px;
+    top: 380px;
 }
 
 #obstacleForteen{
@@ -294,7 +294,7 @@
     width: fit-content;
     position: absolute;
     left: 6580px;
-    top: 350px;
+    top: 380px;
 }
 
 #obstacleFifteen{
@@ -302,7 +302,7 @@
     width: fit-content;
     position: absolute;
     left: 6500px;
-    top: 100px;
+    top: 130px;
 }
 
 #obstacleSixteen{
@@ -310,7 +310,7 @@
     width: fit-content;
     position: absolute;
     left: 6190px;
-    top: 100px;
+    top: 130px;
 }
 
 

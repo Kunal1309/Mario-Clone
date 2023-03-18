@@ -10,6 +10,7 @@ window.onload = function () {
     const $endGameButton = document.getElementById('endGameButton');
     const $displayEndScore = document.getElementById('displayEndScore');
     const brickBlock = document.getElementsByClassName("BricksBlockBarrier");
+    const skyBlueBlock = document.getElementsByClassName("gameOverBlock");
 
     const $villainOne = document.getElementById('villainHeadOne');
     const $villainTwo = document.getElementById('villainHeadTwo');
@@ -27,10 +28,14 @@ window.onload = function () {
     const $turtleSix = document.getElementById('turtlesSix_left');
 
 
-    const $marioBottom = parseInt(window.getComputedStyle($mario).getPropertyValue('bottom'));
-    const $mario2Bottom = parseInt(window.getComputedStyle($mario2).getPropertyValue('bottom'));
-    const $marioLeft = parseInt(window.getComputedStyle($mario).getPropertyValue('left'));
-    const $mario2Left = parseInt(window.getComputedStyle($mario2).getPropertyValue('left'));
+    const $startSound = document.getElementById('marioAudioStart');
+    const $mainSound = document.getElementById('marioAudioMain');
+    const $jumpSound = document.getElementById('marioAudioJump');
+    const $coinSound = document.getElementById('marioAudioCoin');
+    const $overSound = document.getElementById('marioAudioGameOver');
+    const $winSound = document.getElementById('marioAudioWin');
+
+    $startSound.play();
 
     let isJumping = false;
     let upTime;
@@ -39,12 +44,14 @@ window.onload = function () {
     let counter = 0;
     let jumper = 0;
     var runMario, runMario2, scoreInterval;
+    let counting = Number($mario.style.bottom.slice(0, -2));
 
 
-    // ========================= Function for Score which will start just after Window load ==============================
+    // ========================= Function for Score ==============================
 
     score = 0
     $currentScore.innerText = score;
+
 
     function scoring() {
         score++;
@@ -61,9 +68,21 @@ window.onload = function () {
 
     function moveForward() {
         if (counter == 10810 || counter + 40 >= 10810) {
+            $winSound.play();
+            $mainSound.pause();
+            setTimeout(() => {
+                $winSound.pause();
+                $overSound.play();
+                $endGame.style.display = 'flex';
+                $mainGame.style.display = 'none';
+                $displayEndScore.innerText = score;
+                counter = 0;
+                stopScore();
+                return;
+            }, 2000)
             return;
         }
-        // ((($mario.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right)) && (((brickBlock[j].getBoundingClientRect().bottom > $mario.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario.getBoundingClientRect().bottom) || (brickBlock[j].getBoundingClientRect().bottom > $mario2.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario2.getBoundingClientRect().bottom)) || (($mario.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom) || ($mario2.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario2.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom))))
+
         else {
             for (var i = 0; i <= 40; i++) {
                 for (var j = 0; j < brickBlock.length; j++) {
@@ -114,23 +133,31 @@ window.onload = function () {
             $mario.style.left = counter + (10400 - counter) + "px";
             $mario2.style.bottom = (jumper + 460) + "px";
             $mario2.style.left = counter + (10400 - counter) + "px";
+            $winSound.play();
+            $mainSound.pause();
+            setTimeout(() => {
+                $winSound.pause();
+                $overSound.play();
+                $endGame.style.display = 'flex';
+                $mainGame.style.display = 'none';
+                $displayEndScore.innerText = score;
+                counter = 0;
+                stopScore();
+                return;
+            }, 2000)
             return;
         }
 
         else {
-            let counting = 0;
-            for (let i = 0; i <= 460; i++) {
+            for (let i = 0; i <= 280; i++) {
                 counting += 1;
-                // counter += 0.2;
                 $mario.style.bottom = (jumper + counting) + "px";
-                // $mario.style.left = counter + "px";
                 $mario2.style.bottom = (jumper + counting) + "px";
-                // $mario2.style.left = counter + "px";
             }
 
         }
-        setTimeout(JumpFault, 1000);
-
+        $jumpSound.play();
+        setTimeout(JumpFault, 10);
     }
 
     function longJump() {
@@ -186,38 +213,33 @@ window.onload = function () {
         if (counter == 10400) {
             $mario.style.bottom = "130px";
             $mario.style.left = counter + (10400 - counter) + "px";
+            $winSound.play();
+            $mainSound.pause();
             return;
         }
         else {
-
-            let counting = 461;
             for (let i = 0; i <= 330; i++) {
 
                 for (let i = 0; i < villain.length; i++) {
                     //================ For Villain Over when Mario Touches Villain by Top-Side of Villain =============================================================
-                    // ((($mario.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right)) && (($mario.getBoundingClientRect().bottom >= villain[i].getBoundingClientRect().top && $mario.getBoundingClientRect().top <= villain[i].getBoundingClientRect().bottom) || ($mario2.getBoundingClientRect().bottom >= villain[i].getBoundingClientRect().top && $mario2.getBoundingClientRect().top <= villain[i].getBoundingClientRect().bottom)))
                     if ((($mario.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right)) && (($mario.getBoundingClientRect().bottom == villain[i].getBoundingClientRect().top) || ($mario2.getBoundingClientRect().bottom == villain[i].getBoundingClientRect().top))) {
                         let counting = 461;
-
                         villain[i].style.bottom = "0px";
                         villain[i].style.display = "none";
-
                     }
                 }
 
                 for (var j = 0; j < brickBlock.length; j++) {
-                    // ((($mario.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right)) && (((brickBlock[j].getBoundingClientRect().bottom > $mario.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario.getBoundingClientRect().bottom) || (brickBlock[j].getBoundingClientRect().bottom > $mario2.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario2.getBoundingClientRect().bottom)) || (($mario.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom) || ($mario2.getBoundingClientRect().bottom >= brickBlock[j].getBoundingClientRect().top && $mario2.getBoundingClientRect().bottom <= brickBlock[j].getBoundingClientRect().bottom))))
                     if ((($mario.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= brickBlock[j].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= brickBlock[j].getBoundingClientRect().right)) && ((brickBlock[j].getBoundingClientRect().top == $mario.getBoundingClientRect().bottom) || (brickBlock[j].getBoundingClientRect().top == $mario2.getBoundingClientRect().bottom))) {
                         return;
                     }
                 }
 
-                counting -= 1;
-                // counter += 0.2;
-                $mario.style.bottom = (jumper + counting) + "px";
-                // $mario.style.left = counter + "px";
-                $mario2.style.bottom = (jumper + counting) + "px";
-                // $mario2.style.left = counter + "px";
+                if (counting >= 130) {
+                    counting -= 1;
+                    $mario.style.bottom = (jumper + counting) + "px";
+                    $mario2.style.bottom = (jumper + counting) + "px";
+                }
             }
         }
 
@@ -258,15 +280,12 @@ window.onload = function () {
         switch (event.keyCode) {
             case 39:
                 moveForward();
-                // marioDead();
                 break;
             case 38:
                 JumpFault();
                 break;
             case 37:
                 moveBackward();
-                // setInterval(marioDead, 1);
-                // console.log("abc")
                 break;
             case 40:
                 $mario.style.height = "130px";
@@ -285,40 +304,78 @@ window.onload = function () {
 
         for (let i = 0; i < villain.length; i++) {
             if (($mario.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario.getBoundingClientRect().bottom === villain[i].getBoundingClientRect().bottom && $mario.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right > villain[i].getBoundingClientRect().left && $mario2.getBoundingClientRect().bottom === villain[i].getBoundingClientRect().bottom && $mario2.getBoundingClientRect().left < villain[i].getBoundingClientRect().right)) {
+                $mainSound.pause();
+                $overSound.play();
                 $endGame.style.display = 'flex';
                 $mainGame.style.display = 'none';
                 $displayEndScore.innerText = score;
                 counter = 0;
                 stopScore();
-                console.log("kmg")
                 return;
             }
-        };
+        }
+
+        for (let k = 0; k < skyBlueBlock.length; k++) {
+            if (($mario.getBoundingClientRect().right >= skyBlueBlock[k].getBoundingClientRect().left && $mario.getBoundingClientRect().bottom === skyBlueBlock[k].getBoundingClientRect().bottom && $mario.getBoundingClientRect().left <= skyBlueBlock[k].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right > skyBlueBlock[k].getBoundingClientRect().left && $mario2.getBoundingClientRect().bottom === skyBlueBlock[k].getBoundingClientRect().bottom && $mario2.getBoundingClientRect().left < skyBlueBlock[k].getBoundingClientRect().right)) {
+                $mainSound.pause();
+                $overSound.play();
+                $endGame.style.display = 'flex';
+                $mainGame.style.display = 'none';
+                $displayEndScore.innerText = score;
+                counter = 0;
+                stopScore();
+                return;
+            }
+        }
+
     }
 
+    //==================================================================================================================================================================
+
+    //================ Functions for Start Game when Click over Start button on First Webpage =============================================================
+
     function startGame() {
+        $startSound.pause();
+        $mainSound.play();
+
+        setInterval(() => {
+            $mainSound.play();
+        }, 2000)
+
         $startGame.style.display = 'none';
         $endGame.style.display = 'none';
         $mainGame.style.display = 'block';
+
         scoreInterval = setInterval(scoring, 100);
+
         runMario = setInterval(
             function () {
                 marioDead();
             }, 1);
     }
 
+    //==================================================================================================================================================================
+
+    //================ Functions for Re-Start Game when Click over Play-Again button on Game Over Webpage =============================================================
+
     function endGame() {
+        $overSound.pause();
+        $startSound.play();
         location.href = "index.html";
         $startGame.style.display = 'block';
         $endGame.style.display = 'none';
         $mainGame.style.display = 'none';
     }
 
+        //==================================================================================================================================================================
+
+    //================ Event-Listener for Start Button & Play-Again button =============================================================
+
     $startButton.addEventListener('click', startGame);
     $endGameButton.addEventListener('click', endGame);
 
-    //==================================================================================================================================================================
-    //==================================================================================================================================================================
-    //==================================================================================================================================================================
+    //==============================================================================================================================================================
+    //===================================={ THANKS FOR VISIT }==================================================================================================================
+    //======================================{ KUNAL TITARE }=============================================================================================================
     //==================================================================================================================================================================
 }

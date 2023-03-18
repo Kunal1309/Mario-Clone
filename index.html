@@ -14,12 +14,33 @@
 </head>
 
 <body>
+    <audio id="marioAudioWin">
+        <source src="sound/StageWin(SuperMario).mp3" type="audio/mpeg">
+    </audio>
+    <audio id="marioAudioStart">
+        <source src="sound/SuperMarioStart.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="marioAudioMain">
+        <source src="sound/SuperMarioMain.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="marioAudioJump">
+        <source src="sound/SuperMarioJump.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="marioAudioCoin">
+        <source src="sound/Super Mario Bros. Coin - QuickSounds.com.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="marioAudioGameOver">
+        <source src="sound/GameOverSuperMario.mp3" type="audio/mpeg">
+    </audio>
+
+
+
     <div id="startGame">
         <p>WELCOME TO SUPER MARIO</p>
         <img class="startGameLeft" src=".\Images\Mario.gif" alt="">
         <div class="startGameMid">
             <p>Move Forward: Press Right Arrow Key ( > )</p>
-            <p>Move Backward: Press Left Arrow Key (  )</p>
+            <p>Move Backward: Press Left Arrow Key ( )</p>
             <p>Jump: Press Up Arrow Key ( ^ )</p>
             <p>Reduce Size: Press Down Arrow Key ( v )</p>
             <button id="startButton">Let's Start The Game</button>
@@ -173,10 +194,10 @@
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
         </div>
         <div class="obstacle" id="obstacleTwentyFive">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
         </div>
         <div class="obstacle" id="obstacleTwentySix">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
@@ -215,15 +236,15 @@
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
         </div>
         <div class="obstacle" id="obstacleThirtyFour">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
         </div>
         <div class="obstacle" id="obstacleThirtyFive">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
@@ -325,8 +346,8 @@
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
-            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock gameOverBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock gameOverBlock" src=".\Images\sky-blue-color-solid.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
@@ -336,8 +357,8 @@
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
-            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock gameOverBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock gameOverBlock" src=".\Images\sky-blue-color-solid.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
@@ -398,7 +419,7 @@
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock gameOverBlock" src=".\Images\sky-blue-color-solid.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
@@ -492,8 +513,8 @@
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
-            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock gameOverBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock gameOverBlock" src=".\Images\sky-blue-color-solid.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
@@ -503,8 +524,8 @@
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
-            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock gameOverBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock gameOverBlock" src=".\Images\sky-blue-color-solid.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
@@ -565,7 +586,7 @@
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock" src=".\Images\sky-blue-color-solid.png" alt="">
+            <img class="BricksBlock gameOverBlock" src=".\Images\sky-blue-color-solid.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock" src=".\Images\BricksBlock.png" alt="">
