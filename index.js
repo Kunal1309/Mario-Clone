@@ -35,7 +35,6 @@ window.onload = function () {
     const $overSound = document.getElementById('marioAudioGameOver');
     const $winSound = document.getElementById('marioAudioWin');
 
-    $startSound.play();
 
     let isJumping = false;
     let upTime;
@@ -48,6 +47,8 @@ window.onload = function () {
 
 
     // ========================= Function for Score ==============================
+
+    $startSound.play();
 
     score = 0
     $currentScore.innerText = score;
@@ -62,11 +63,27 @@ window.onload = function () {
         clearInterval(scoreInterval);
     }
 
+    // function gravity() {
+    //     let k = 0;
+    //     while (counting > 129) {
+    //         for (var u = 0; u < brickBlock.length; u++) {
+    //             if ((($mario.getBoundingClientRect().right >= brickBlock[u].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= brickBlock[u].getBoundingClientRect().right) && ($mario.getBoundingClientRect().bottom == brickBlock[u].getBoundingClientRect().bottom)) || (($mario2.getBoundingClientRect().right >= brickBlock[u].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= brickBlock[u].getBoundingClientRect().right) && ($mario2.getBoundingClientRect().bottom == brickBlock[u].getBoundingClientRect().bottom))) {
+    //                 return;
+    //             }
+    //         }
+    //         counting--;
+    //         $mario.style.bottom = (jumper + counting) + "px";
+    //         $mario2.style.bottom = (jumper + counting) + "px"
+    //         k++;
+    //     }
+    // }
+
     // ===========================================================================================================
 
     // ============================== Function to Move Forward after Clicking Right Arrow Button =========================================
 
     function moveForward() {
+
         if (counter == 10810 || counter + 40 >= 10810) {
             $winSound.play();
             $mainSound.pause();
@@ -85,12 +102,12 @@ window.onload = function () {
 
         else {
             for (var i = 0; i <= 40; i++) {
+                counter += 1;
                 for (var j = 0; j < brickBlock.length; j++) {
                     if ((($mario.getBoundingClientRect().right == brickBlock[j].getBoundingClientRect().left) || ($mario2.getBoundingClientRect().right == brickBlock[j].getBoundingClientRect().left)) && (((brickBlock[j].getBoundingClientRect().bottom > $mario.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario.getBoundingClientRect().bottom) || (brickBlock[j].getBoundingClientRect().bottom > $mario2.getBoundingClientRect().top && brickBlock[j].getBoundingClientRect().bottom < $mario2.getBoundingClientRect().bottom)) || (($mario.getBoundingClientRect().bottom > brickBlock[j].getBoundingClientRect().top && $mario.getBoundingClientRect().bottom < brickBlock[j].getBoundingClientRect().bottom) || ($mario2.getBoundingClientRect().bottom > brickBlock[j].getBoundingClientRect().top && $mario2.getBoundingClientRect().bottom < brickBlock[j].getBoundingClientRect().bottom)))) {
                         return;
                     }
                 }
-                counter += 1;
                 $mario.style.left = counter + "px";
                 $mario2.style.left = counter + "px";
             }
@@ -367,7 +384,7 @@ window.onload = function () {
         $mainGame.style.display = 'none';
     }
 
-        //==================================================================================================================================================================
+    //==================================================================================================================================================================
 
     //================ Event-Listener for Start Button & Play-Again button =============================================================
 
