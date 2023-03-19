@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link href="/favicon.ico" type="image/x-icon" rel="icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Mario-Clone</title>
 </head>
@@ -57,47 +58,47 @@
         <button id="endGameButton">Start Again</button>
     </div>
     <div class="main" id="mainGame">
-        <div id="score">SCORE: <span id="currentScore"></span></div>
-        <div id="marioMan">
+        <section id="score">SCORE: <span id="currentScore"></span></section>
+        <section id="marioMan">
             <img class="meetMario1" id="mario" src=".\Images\Mario.gif" alt="">
             <img class="meetMario2" id="mario2" src=".\Images\marioStanding.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleOne">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwo">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BlankGoldBox.webp" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BlankGoldBox.webp" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThree">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="GreenPipe">
+        </section>
+        <section class="obstacle" id="obstacleOne">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleTwo">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BlankGoldBox.webp" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock " src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BlankGoldBox.webp" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleThree">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        
             <img class="GreenPipeFirst BricksBlockBarrier" src=".\Images\PipeGreen.png" alt="">
             <img class="GreenPipeSecond BricksBlockBarrier" src=".\Images\PipeGreen.png" alt="">
             <img class="GreenPipeThird BricksBlockBarrier" src=".\Images\PipeGreen.png" alt="">
             <img class="GreenPipeFourth BricksBlockBarrier" src=".\Images\PipeGreen.png" alt="">
             <img class="GreenPipeFive BricksBlockBarrier" src=".\Images\PipeGreen.png" alt="">
             <img class="GreenPipeSix BricksBlockBarrier" src=".\Images\PipeGreen.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleFour">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BlankGoldBox.webp" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleFive">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
+        
+        <section class="obstacle" id="obstacleFour">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock " src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BlankGoldBox.webp" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock " src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleFive">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+        </section>
 
 
         <img class="villainHead villain" id="villainHeadOne" src=".\Images\VillainHeadImg.png" alt="">
@@ -115,128 +116,148 @@
         <img class="TurtleVillain villain" id="turtlesSix_left" src=".\Images\villainTurtleLeft.png" alt="">
 
 
-        <div class="obstacle" id="obstacleSix">
+        <section class="obstacle" id="obstacleSix">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\QuestionBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleSeven">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock " src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleEight">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleNine">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\QuestionBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleTen">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\QuestionBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleEleven">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\QuestionBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleTwelve">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\QuestionBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleThirteen">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleForteen">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleFifteen">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\QuestionBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\QuestionBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleSixteen">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleSeventeen">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\QuestionBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleSeven">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleEight">
+        </section>
+        <section class="obstacle" id="obstacleEighteen">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleNine">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\QuestionBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTen">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\QuestionBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleEleven">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\QuestionBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwelve">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\QuestionBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThirteen">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleForteen">
+        </section>
+        <section class="obstacle" id="obstacleNineteen">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleFifteen">
+        </section>
+        <section class="obstacle" id="obstacleTwenty">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\QuestionBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\QuestionBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleTwentyOne">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleSixteen">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleSeventeen">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleTwentyTwo">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleEighteen">
+        </section>
+        <section class="obstacle" id="obstacleTwentyThree">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleTwentyFour">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleNineteen">
+        </section>
+        <section class="obstacle" id="obstacleTwentyFive">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwenty">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwentyOne">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleTwentySix">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwentyTwo">
+        </section>
+        <section class="obstacle" id="obstacleTwentySeven">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleTwentyEight">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwentyThree">
+        </section>
+        <section class="obstacle" id="obstacleTwentyNine">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwentyFour">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwentyFive">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleThirty">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwentySix">
+        </section>
+        <section class="obstacle" id="obstacleThirtyOne">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleThirtyTwo">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwentySeven">
+        </section>
+        <section class="obstacle" id="obstacleThirtyThree">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock " src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\QuestionBlock.png" alt="">
+            <img class="BricksBlock BricksBlockBarrier jumpBlock" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleThirtyFour">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwentyEight">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleTwentyNine">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThirty">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleThirtyFive">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThirtyOne">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThirtyTwo">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThirtyThree">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\QuestionBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThirtyFour">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleThirtySix">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
@@ -244,67 +265,48 @@
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleThirtySeven">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThirtyFive">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleThirtyEight">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThirtySix">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleThirtyNine">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleFourty">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThirtySeven">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleFourtyOne">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
+        </section>
+        <section class="obstacle" id="obstacleFourtyTwo">
             <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThirtyEight">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleThirtyNine">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleFourty">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleFourtyOne">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
-        <div class="obstacle" id="obstacleFourtyTwo">
-            <img class="BricksBlock BricksBlockBarrier" src=".\Images\BricksBlock.png" alt="">
-        </div>
+        </section>
 
-        <div class="runningPath">
+        <section class="runningPath">
             <img class="longBricksWallOne longBricksWall" src=".\Images\longBrickWall.png" alt="">            
             <img class="longBricksWallTwo  longBricksWall" src=".\Images\longBrickWall.png" alt="">
             <img class="longBricksWallThree longBricksWall" src=".\Images\longBrickWall.png" alt="">
             <img class="longBricksWallFour longBricksWall" src=".\Images\longBrickWall.png" alt="">
-        </div>
+        </section>
+        <img class="grass" src=".\Images\grass.png" alt="">
         <img id="endImg" src=".\Images\end.png" alt="">
     </div>
     <script src=".\index.js"></script>

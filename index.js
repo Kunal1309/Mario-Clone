@@ -11,6 +11,7 @@ window.onload = function () {
     const $displayEndScore = document.getElementById('displayEndScore');
     const brickBlock = document.getElementsByClassName("BricksBlockBarrier");
     const noRunRoute = document.getElementsByClassName("longBricksWall");
+    const jumpBlock = document.getElementsByClassName("jumpBlock");
 
     const $villainOne = document.getElementById('villainHeadOne');
     const $villainTwo = document.getElementById('villainHeadTwo');
@@ -63,26 +64,49 @@ window.onload = function () {
         clearInterval(scoreInterval);
     }
 
+    // ===========================================================================================================
+
+    // ============================== Function to Game over when Fall into Gap between Run Route =========================================
+
+    // function checkRunPath() {
+    //     if (counting <= 130){
+    //         for (let k = 0; k < noRunRoute.length; k++) {
+    //             if (($mario.getBoundingClientRect().left > noRunRoute[k].getBoundingClientRect().right && $mario.getBoundingClientRect().right < noRunRoute[k + 1].getBoundingClientRect().left)) {
+    //                 $mario.style.bottom = "-100px";
+    //                 $mario2.style.bottom = "-100px";
+    //                 $mainSound.pause();
+    //                 $overSound.play();
+
+    //                 setTimeout(() => {
+    //                     $endGame.style.display = 'flex';
+    //                     $mainGame.style.display = 'none';
+    //                     $displayEndScore.innerText = score;
+    //                     counter = 0;
+    //                     stopScore();
+    //                 }, 2000);
+
+    //                 return;
+    //             }
+    //         }
+    //     }
+    // }
+
     function checkRunPath() {
-        if (counting <= 140){
-            for (let k = 0; k < noRunRoute.length; k++) {
-                if (($mario.getBoundingClientRect().left >= noRunRoute[k].getBoundingClientRect().right && $mario.getBoundingClientRect().right >= noRunRoute[k + 1].getBoundingClientRect().left)) {
-                    $mario.style.bottom = "-100px";
-                    $mario2.style.bottom = "-100px";
-                    $mainSound.pause();
-                    $overSound.play();
-    
-                    setTimeout(() => {
-                        $endGame.style.display = 'flex';
-                        $mainGame.style.display = 'none';
-                        $displayEndScore.innerText = score;
-                        counter = 0;
-                        stopScore();
-                    }, 2000);
-    
-                    return;
-                }
-            }
+        if (((Number($mario.style.left.slice(0, -2)) > 3230 && Number($mario.style.left.slice(0, -2)) + 70 < 3400 && Number($mario.style.bottom.slice(0, -2) <= 130)) || (Number($mario.style.left.slice(0, -2)) > 4010 && Number($mario.style.left.slice(0, -2)) + 70 < 4180 && Number($mario.style.bottom.slice(0, -2) <= 130)) || (Number($mario.style.left.slice(0, -2)) > 7390 && Number($mario.style.left.slice(0, -2)) + 70 < 7500 && Number($mario.style.bottom.slice(0, -2) <= 130))) ||
+            ((Number($mario2.style.left.slice(0, -2)) > 3230 && Number($mario2.style.left.slice(0, -2)) + 70 < 3400 && Number($mario2.style.bottom.slice(0, -2) <= 130)) || (Number($mario2.style.left.slice(0, -2)) > 4010 && Number($mario2.style.left.slice(0, -2)) + 70 < 4180 && Number($mario2.style.bottom.slice(0, -2) <= 130)) || (Number($mario2.style.left.slice(0, -2)) > 7390 && Number($mario2.style.left.slice(0, -2)) + 70 < 7500 && Number($mario2.style.bottom.slice(0, -2) <= 130)))) {
+
+            $mario.style.bottom = "-10px";
+            $mario2.style.bottom = "-10px";
+            $mainSound.pause();
+            $overSound.play();
+
+            setTimeout(() => {
+                $endGame.style.display = 'flex';
+                $mainGame.style.display = 'none';
+                $displayEndScore.innerText = score;
+                counter = 0;
+                stopScore();
+            }, 500);
         }
     }
 
@@ -167,6 +191,7 @@ window.onload = function () {
 
     function Jump(event) {
         clearInterval(runMario);
+        $jumpSound.play();
 
         if (counter == 10400) {
             $mario.style.bottom = (jumper + 460) + "px";
@@ -188,15 +213,32 @@ window.onload = function () {
             return;
         }
 
+        // else if((Number($mario.style.bottom.slice(0, -2)) <= 130) && ((Number($mario.style.left.slice(0, -2)) > 600 && Number($mario.style.left.slice(0, -2)) < 670)) || (Number($mario.style.left.slice(0, -2)) > 800 && Number($mario.style.left.slice(0, -2)) < 1240) || (Number($mario.style.left.slice(0, -2)) > 3500 && Number($mario.style.left.slice(0, -2)) < 3730) || (Number($mario.style.left.slice(0, -2)) > 4480 && Number($mario.style.left.slice(0, -2)) < 4550) || (Number($mario.style.left.slice(0, -2)) > 4800 && Number($mario.style.left.slice(0, -2)) < 4960) || (Number($mario.style.left.slice(0, -2)) > 5300 && Number($mario.style.left.slice(0, -2)) < 5370) || (Number($mario.style.left.slice(0, -2)) > 5500 && Number($mario.style.left.slice(0, -2)) < 5620) || (Number($mario.style.left.slice(0, -2)) > 5700 && Number($mario.style.left.slice(0, -2)) < 5770) || (Number($mario.style.left.slice(0, -2)) > 6000 && Number($mario.style.left.slice(0, -2)) < 6070) || (Number($mario.style.left.slice(0, -2)) > 6580 && Number($mario.style.left.slice(0, -2)) < 6740) || (Number($mario.style.left.slice(0, -2)) > 9150 && Number($mario.style.left.slice(0, -2)) < 9450)){
+        //     for(var k=0; k<100; k++){
+        //         $mario.style.bottom = (jumper + counting) + "px";
+        //         $mario2.style.bottom = (jumper + counting) + "px";
+        //     }
+        // }
+
         else {
             for (let i = 0; i <= 280; i++) {
                 counting += 1;
+                for (var j = 0; j < jumpBlock.length; j++) {
+                    if ((($mario.getBoundingClientRect().right >= jumpBlock[j].getBoundingClientRect().left && $mario.getBoundingClientRect().left <= jumpBlock[j].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right >= jumpBlock[j].getBoundingClientRect().left && $mario2.getBoundingClientRect().left <= jumpBlock[j].getBoundingClientRect().right)) && (((jumpBlock[j].getBoundingClientRect().bottom >= $mario.getBoundingClientRect().top)))) {
+                        jumpBlock[j].style.bottom = (Number(jumpBlock[j].style.bottom.slice(0, -2)) + 15) + "px"
+                        setTimeout(() => {
+                            jumpBlock[j].style.bottom = (Number(jumpBlock[j].style.bottom.slice(0, -2)) - 15) + "px"
+                        }, 1000)
+                        setTimeout(JumpFault, 1000);
+                        return;
+                    }
+                }
                 $mario.style.bottom = (jumper + counting) + "px";
                 $mario2.style.bottom = (jumper + counting) + "px";
             }
 
         }
-        $jumpSound.play();
+
         setTimeout(JumpFault, 10);
     }
 

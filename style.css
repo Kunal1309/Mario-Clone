@@ -7,6 +7,14 @@
     display: none;
 }
 
+.grass{
+    width: 13000px; 
+    height: 140px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
 .longBricksWallOne {
     position: absolute;
     bottom: 0px;
@@ -187,59 +195,53 @@
     position: absolute;
     top: 400px;
     left: 600px;
-    width: fit-content;
+    width: 70px;
 }
 
 #obstacleTwo {
     position: absolute;
     top: 400px;
     left: 800px;
-    width: fit-content;
+    width: 440px;
 }
 
 #obstacleThree {
     position: absolute;
     top: 160px;
     left: 950px;
-    width: fit-content;
-}
-
-#GreenPipe {
-    width: fit-content;
-    position: absolute;
-    bottom: 120px;
-    left: 1450px;
+    width: 160px;
 }
 
 .GreenPipeFirst {
     width: 100px;
     height: 130px;
     position: absolute;
-    bottom: -5px;
+    bottom: 125px;
+    left: 1450px;
 }
 
 .GreenPipeSecond {
     width: 100px;
     height: 190px;
     position: absolute;
-    left: 400px;
-    bottom: -5px;
+    left: 1850px;
+    bottom: 125px;
 }
 
 .GreenPipeThird {
     width: 100px;
     height: 240px;
     position: absolute;
-    left: 800px;
-    bottom: -10px;
+    left: 2250px;
+    bottom: 125px;
 }
 
 .GreenPipeFourth {
     width: 100px;
     height: 240px;
     position: absolute;
-    left: 1250px;
-    bottom: -10px;
+    left: 2700px;
+    bottom: 125px;
 }
 
 .runningPath {
@@ -249,114 +251,107 @@
     bottom: 3px;
 }
 
-.runningPathSecond {
-    width: fit-content;
-    display: flex;
-    position: absolute;
-    bottom: 68px;
-}
-
 #obstacleFour {
-    width: fit-content;
+    width: 230px;
     position: absolute;
     left: 3500px;
-    top: 380px;
+    top: 400px;
 }
 
 #obstacleFive {
-    width: fit-content;
+    width: 440px;
     float: left;
     position: absolute;
     left: 3650px;
-    top: 100px;
+    top: 160px;
 }
 
 #obstacleSix {
-    width: fit-content;
+    width: 300px;
     float: left;
     position: absolute;
     left: 4250px;
-    top: 100px;
+    top: 160px;
 }
 
 #obstacleSeven {
-    width: fit-content;
+    width: 70px;
     position: absolute;
     left: 4480px;
-    top: 380px;
+    top: 400px;
 }
 
 #obstacleEight {
-    width: fit-content;
+    width: 160px;
     position: absolute;
     left: 4800px;
-    top: 380px;
+    top: 400px;
 }
 
 #obstacleNine {
-    width: fit-content;
+    width: 70px;
     position: absolute;
     left: 5300px;
-    top: 380px;
+    top: 400px;
 }
 
 #obstacleTen {
-    width: fit-content;
+    width: 70px;
     position: absolute;
     left: 5500px;
-    top: 380px;
+    top: 400px;
 }
 
 #obstacleEleven {
-    width: fit-content;
+    width: 70px;
     position: absolute;
     left: 5700px;
-    top: 380px;
+    top: 400px;
 }
 
 #obstacleTwelve {
-    width: fit-content;
+    width: 70px;
     position: absolute;
     left: 5500px;
-    top: 150px;
+    top: 160px;
 }
 
 #obstacleThirteen {
     float: left;
-    width: fit-content;
+    width: 70px;
     position: absolute;
     left: 6000px;
-    top: 380px;
+    top: 400px;
 }
 
 #obstacleForteen {
     float: left;
-    width: fit-content;
+    width: 160px;
     position: absolute;
     left: 6580px;
-    top: 380px;
+    top: 400px;
 }
 
 #obstacleFifteen {
     float: left;
-    width: fit-content;
+    width: 300px;
     position: absolute;
     left: 6500px;
-    top: 130px;
+    top: 160px;
 }
 
 #obstacleSixteen {
     float: left;
-    width: fit-content;
+    width: 160px;
     position: absolute;
     left: 6190px;
-    top: 130px;
+    top: 160px;
 }
 
 
 #obstacleSeventeen {
     float: left;
-    width: fit-content;
+    width: 300px;
     position: absolute;
     left: 7100px;
     bottom: 130px;
@@ -364,7 +359,7 @@
 
 #obstacleEighteen {
     float: left;
-    width: fit-content;
+    width: 230px;
     position: absolute;
     left: 7174px;
     bottom: 190px;
@@ -372,7 +367,7 @@
 
 #obstacleNineteen {
     float: left;
-    width: fit-content;
+    width: 160px;
     position: absolute;
     left: 7248px;
     bottom: 250px;
@@ -380,7 +375,7 @@
 
 #obstacleTwenty {
     float: left;
-    width: fit-content;
+    width: 70px;
     position: absolute;
     left: 7322px;
     bottom: 310px;
@@ -388,7 +383,7 @@
 
 #obstacleTwentyOne {
     float: left;
-    width: fit-content;
+    width: 300px;
     position: absolute;
     left: 7500px;
     bottom: 130px;
@@ -396,7 +391,7 @@
 
 #obstacleTwentyTwo {
     float: left;
-    width: fit-content;
+    width: 230px;
     position: absolute;
     left: 7500px;
     bottom: 190px;
@@ -404,7 +399,7 @@
 
 #obstacleTwentyThree {
     float: left;
-    width: fit-content;
+    width: 160px;
     position: absolute;
     left: 7500px;
     bottom: 250px;
@@ -412,7 +407,7 @@
 
 #obstacleTwentyFour {
     float: left;
-    width: fit-content;
+    width: 70px;
     position: absolute;
     left: 7500px;
     bottom: 310px;
@@ -420,7 +415,7 @@
 
 #obstacleTwentyFive {
     float: left;
-    width: fit-content;
+    width: 300px;
     position: absolute;
     left: 8039px;
     bottom: 130px;
@@ -428,7 +423,7 @@
 
 #obstacleTwentySix {
     float: left;
-    width: fit-content;
+    width: 230px;
     position: absolute;
     left: 8113px;
     bottom: 190px;
@@ -436,7 +431,7 @@
 
 #obstacleTwentySeven {
     float: left;
-    width: fit-content;
+    width: 160px;
     position: absolute;
     left: 8187px;
     bottom: 250px;
@@ -444,7 +439,7 @@
 
 #obstacleTwentyEight {
     float: left;
-    width: fit-content;
+    width: 70px;
     position: absolute;
     left: 8261px;
     bottom: 310px;
@@ -452,7 +447,7 @@
 
 #obstacleTwentyNine {
     float: left;
-    width: fit-content;
+    width: 300px;
     position: absolute;
     left: 8400px;
     bottom: 130px;
@@ -460,7 +455,7 @@
 
 #obstacleThirty {
     float: left;
-    width: fit-content;
+    width: 230px;
     position: absolute;
     left: 8400px;
     bottom: 190px;
@@ -468,7 +463,7 @@
 
 #obstacleThirtyOne {
     float: left;
-    width: fit-content;
+    width: 160px;
     position: absolute;
     left: 8400px;
     bottom: 250px;
@@ -476,39 +471,39 @@
 
 #obstacleThirtyTwo {
     float: left;
-    width: fit-content;
+    width: 70px;
     position: absolute;
     left: 8400px;
     bottom: 310px;
 }
 
 .GreenPipeFive {
-    width: 150px;
+    width: 120px;
     height: 150px;
     position: absolute;
-    left: 7450px;
-    bottom: -2px;
+    left: 8900px;
+    bottom: 125px;
 }
 
 #obstacleThirtyThree {
     float: left;
-    width: fit-content;
+    width: 300px;
     position: absolute;
     left: 9150px;
-    bottom: 350px;
+    top: 400px;
 }
 
 .GreenPipeSix {
-    width: 150px;
+    width: 120px;
     height: 100px;
     position: absolute;
-    left: 8150px;
-    bottom: -2px;
+    left: 9580px;
+    bottom: 125px;
 }
 
 #obstacleThirtyFour {
     float: left;
-    width: fit-content;
+    width: 670px;
     position: absolute;
     left: 9700px;
     bottom: 130px;
@@ -516,7 +511,7 @@
 
 #obstacleThirtyFive {
     float: left;
-    width: fit-content;
+    width: 590px;
     position: absolute;
     left: 9774px;
     bottom: 190px;
@@ -524,7 +519,7 @@
 
 #obstacleThirtySix {
     float: left;
-    width: fit-content;
+    width: 520px;
     position: absolute;
     left: 9848px;
     bottom: 250px;
@@ -532,7 +527,7 @@
 
 #obstacleThirtySeven {
     float: left;
-    width: fit-content;
+    width: 440px;
     position: absolute;
     left: 9922px;
     bottom: 310px;
@@ -540,7 +535,7 @@
 
 #obstacleThirtyEight {
     float: left;
-    width: fit-content;
+    width: 370px;
     position: absolute;
     left: 9996px;
     bottom: 370px;
@@ -548,7 +543,7 @@
 
 #obstacleThirtyNine {
     float: left;
-    width: fit-content;
+    width: 300px;
     position: absolute;
     left: 10070px;
     bottom: 430px;
@@ -556,7 +551,7 @@
 
 #obstacleFourty {
     float: left;
-    width: fit-content;
+    width: 230px;
     position: absolute;
     left: 10144px;
     bottom: 490px;
@@ -564,7 +559,7 @@
 
 #obstacleFourtyOne {
     float: left;
-    width: fit-content;
+    width: 160px;
     position: absolute;
     left: 10218px;
     bottom: 550px;
@@ -572,7 +567,7 @@
 
 #obstacleFourtyTwo {
     float: left;
-    width: fit-content;
+    width: 70px;
     position: absolute;
     left: 10292px;
     bottom: 610px;
@@ -798,7 +793,7 @@
 
 #turtlesFive_left {
     position: absolute;
-    bottom: 690px;
+    bottom: 625px;
     animation: turtlesFive_left 10s ease-in 0s infinite reverse forwards;
 }
 
@@ -818,7 +813,7 @@
 
 #turtlesSix_left {
     position: absolute;
-    bottom: 415px;
+    bottom: 387px;
     /* left: 3150px; */
     /* left: 2800px; */
     animation: turtlesSix_left 10s ease-in 0s infinite reverse forwards;
