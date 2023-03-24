@@ -48,8 +48,12 @@ window.onload = function () {
 
 
     // ========================= Function for Score ==============================
-
-    $startSound.play();
+    // $startSound.autoplay = true;
+    // $startSound.muted = true;
+    // $startSound.play();
+    // document.body.addEventListener("mousemove", function () {
+    //     $startSound.play();
+    // })
 
     score = 0
     $currentScore.innerText = score;
@@ -97,8 +101,8 @@ window.onload = function () {
 
             $mario.style.bottom = "-10px";
             $mario2.style.bottom = "-10px";
-            $mainSound.pause();
-            $overSound.play();
+            // $mainSound.pause();
+            // $overSound.play();
 
             setTimeout(() => {
                 $endGame.style.display = 'flex';
@@ -191,7 +195,7 @@ window.onload = function () {
 
     function Jump(event) {
         clearInterval(runMario);
-        $jumpSound.play();
+        // $jumpSound.play();
 
         if (counter == 10400) {
             $mario.style.bottom = (jumper + 460) + "px";
@@ -295,8 +299,8 @@ window.onload = function () {
         if (counter == 10400) {
             $mario.style.bottom = "130px";
             $mario.style.left = counter + (10400 - counter) + "px";
-            $winSound.play();
-            $mainSound.pause();
+            // $winSound.play();
+            // $mainSound.pause();
             return;
         }
         else {
@@ -386,8 +390,8 @@ window.onload = function () {
 
         for (let i = 0; i < villain.length; i++) {
             if (($mario.getBoundingClientRect().right >= villain[i].getBoundingClientRect().left && $mario.getBoundingClientRect().bottom === villain[i].getBoundingClientRect().bottom && $mario.getBoundingClientRect().left <= villain[i].getBoundingClientRect().right) || ($mario2.getBoundingClientRect().right > villain[i].getBoundingClientRect().left && $mario2.getBoundingClientRect().bottom === villain[i].getBoundingClientRect().bottom && $mario2.getBoundingClientRect().left < villain[i].getBoundingClientRect().right)) {
-                $mainSound.pause();
-                $overSound.play();
+                // $mainSound.pause();
+                // $overSound.play();
                 $endGame.style.display = 'flex';
                 $mainGame.style.display = 'none';
                 $displayEndScore.innerText = score;
@@ -404,12 +408,12 @@ window.onload = function () {
     //================ Functions for Start Game when Click over Start button on First Webpage =============================================================
 
     function startGame() {
-        $startSound.pause();
-        $mainSound.play();
+        // $startSound.pause();
+        // $mainSound.play();
 
-        setInterval(() => {
-            $mainSound.play();
-        }, 2000)
+        // setInterval(() => {
+        //     $mainSound.play();
+        // }, 2000)
 
         $startGame.style.display = 'none';
         $endGame.style.display = 'none';
@@ -430,8 +434,8 @@ window.onload = function () {
     //================ Functions for Re-Start Game when Click over Play-Again button on Game Over Webpage =============================================================
 
     function endGame() {
-        $overSound.pause();
-        $startSound.play();
+        // $overSound.pause();
+        // $startSound.play();
         location.href = "index.html";
         $startGame.style.display = 'block';
         $endGame.style.display = 'none';
