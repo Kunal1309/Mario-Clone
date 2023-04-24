@@ -401,9 +401,9 @@ window.onload = function () {
         $startSound.pause();
         $mainSound.play();
 
-        // setInterval(() => {
-        //     $mainSound.play();
-        // }, 2000)
+        setInterval(() => {
+            $mainSound.play();
+        }, 2000)
 
         $startGame.style.display = 'none';
         $endGame.style.display = 'none';
